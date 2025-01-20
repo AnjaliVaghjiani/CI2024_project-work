@@ -60,10 +60,10 @@ So Parent 1:- Candidate 2 (Fitness = 52) \( log(exp(2)) + 0.65 \)
 
    The results will be as:
 
-    | Offspring | Formula                          | Fitness|
-    |-----------|----------------------------------|--------|
-    | 1         | \( log(exp(2)) + cos(x1) \)      | 56     |
-    | 2         | \( cos(x1) + 0.65 \)             | 43     |
+   | Offspring | Formula                          | Fitness|
+   |-----------|----------------------------------|--------|
+   | 1         | \( log(exp(2)) + cos(x1) \)      | 56     |
+   | 2         | \( cos(x1) + 0.65 \)             | 43     |
 
 4. **Mutation**: In mutation we do small random change in the individual's genetic.
 
