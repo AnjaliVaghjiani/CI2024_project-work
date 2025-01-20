@@ -32,11 +32,11 @@ This iterative process continues over multiple generations, progressively improv
 
 | Candidate | Formula                          | Fitness |
 |-----------|----------------------------------|---------|
-| 1         | \( \sin(x_0) + \cos(x_1) + 4 \) | 40      |
-| 2         | \( \log(\exp(2)) + 0.65 \)      | 52      |
-| 3         | \( \cos(x_1) \)                 | 9       |
-| 4         | \( x_0 + x_1 \cdot 4 \)         | 1       |
-| 5         | \( 4 + 3 \cdot x_0 + 3 \)       | 5       |
+| 1         | \( sin(x0) + cos(x1) + 4 \) | 40      |
+| 2         | \( log(exp(2)) + 0.65 \)      | 52      |
+| 3         | \( cos(x1) \)                 | 9       |
+| 4         | \( x0 + x1 *4 \)         | 1       |
+| 5         | \( 4 + 3 * x0 + 3 \)       | 5       |
 
 
 2. **Selection**:- lets do the selection of the parents based on the tournment selection. In our case we select the further population half the size of the population. 
@@ -55,15 +55,15 @@ candidate 2, 3 and 1 are the winner.
 3. **Crossover**: In this process two parents combines their genetic information to produce the offspring.
 
 Lets again select two candidate from the winner candidates
-So Parent 1:- Candidate 2 (Fitness = 52) \( \log(\exp(2)) + 0.65 \)
-   Parent 2:- Candidate 3 (Fitness = 9) \( \cos(x_1) \)
+So Parent 1:- Candidate 2 (Fitness = 52) \( log(exp(2)) + 0.65 \)
+   Parent 2:- Candidate 3 (Fitness = 9) \( cos(x1) \)
 
    The results will be as:
 
-   | Offspring | Formula                          | Fitness|
+    | Offspring | Formula                          | Fitness|
     |-----------|----------------------------------|--------|
-    | 1         | \( \log(\exp(2)) + \cos(x_1) \) | 56   |
-    | 2         | \( \cos(x_1) + 0.65 \)     | 43   |
+    | 1         | \( log(exp(2)) + cos(x1) \)      | 56     |
+    | 2         | \( cos(x1) + 0.65 \)             | 43     |
 
 4. **Mutation**: In mutation we do small random change in the individual's genetic.
 
@@ -71,18 +71,18 @@ Example:-
 
 |Offspring | Orignal formula | Mutated Formula | fitness of mutated formula| 
 |-----------|----------------------------------|----------------------------------|--------|
-| 1         | \( \log(\exp(2)) + \cos(x_1) \) | \( \log(\exp(2)) + \sin(x_1) \)   | 50 |
-|2         | \( \cos(x_1) + 0.65 \)  | \( \cos(x_2) + 0.65 \) | 4|
+| 1         | \( log(exp(2)) + cos(x1) \) | \( log(exp(2)) + sin(x1) \)   | 50 |
+|2         | \( cos(x1) + 0.65 \)  | \( cos(x_2) + 0.65 ) | 4|
 
 5. **Population upadte**: Now the combination of newly created offspring and parents will be the next generation parents
 
 | Individual | Formula                               | Fitness  |
 |------------|---------------------------------------|----------|
-| 1          | \( \log(\exp(2)) + \sin(x_1) \)       | 42 |
-| 2          | \( x_0 + x_1 \times 4 \)              | 96 |
-| 3          | \( 4 + 3 \times x_0 + 3 \)            | 8 |
-| 4          | \( \cos(x_1) \)                       | 75 |
-| 5          | \( \sin(x_0) + \cos(x_1) + 4 \)       | 4 |
+| 1          | \( log(exp(2)) + sin(x1) \)       | 42 |
+| 2          | \( x_0 + x1 * 4 \)              | 96 |
+| 3          | \( 4 + 3 * x0 + 3 \)            | 8 |
+| 4          | \( \cos(x1) \)                       | 75 |
+| 5          | \( \sin(x0) + cos(x1) + 4 \)       | 4 |
 
   
 
