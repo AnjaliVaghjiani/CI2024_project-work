@@ -26,6 +26,9 @@ This iterative process continues over multiple generations, progressively improv
 
 ## Diagram Explaination 
 
+![Blank diagram](https://github.com/user-attachments/assets/525abcaa-ee27-442f-a15e-5ae88d51448a)
+
+
 ## Dummy Example to understand the structure of the code
  
 1. **Initial Population**: Let's consider initial population with its fitness values as follow
