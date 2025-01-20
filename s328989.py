@@ -10,7 +10,6 @@ import numpy as np
 
 # Notez bien: No need to include f0 -- it's just an example!
 
-# for f0 x0 works perfect with lowest mse 0.012..
 def f0(x: np.ndarray) -> np.ndarray:
     return x[0] + np.sin(x[1]) / 5
 
@@ -33,7 +32,7 @@ def f4(x: np.ndarray) -> np.ndarray:
 
 
 def f5(x: np.ndarray) -> np.ndarray: 
-    return np.sin((x[1] * 5.3851e-14) * x[1]) * (((x[1] * np.exp(x[1])) + 1.1635) - np.exp(x[0] + x[1]))  #y=2.00395
+    return np.sin((x[1] * 0) * x[1]) * (((x[1] * np.exp(x[1])) + 1.1635) - np.exp(x[0] + x[1]))  
 
 
 def f6(x: np.ndarray) -> np.ndarray: 
