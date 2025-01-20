@@ -12,7 +12,7 @@ import numpy as np
 
 # for f0 x0 works perfect with lowest mse 0.012..
 def f0(x: np.ndarray) -> np.ndarray:
-    return (np.log(1.2) * x[1]) + x[1] 
+    return x[0] + np.sin(x[1]) / 5
 
 
 
@@ -25,22 +25,24 @@ def f2(x: np.ndarray) -> np.ndarray:
 
 
 def f3(x: np.ndarray) -> np.ndarray:
-    return (2.3 * x[0]*x[0])-(x[1]*x[1]*x[1]) #y=1.08 * 10^2
+    return ((((x[0] * x[0]) - x[2]) + np.exp(-0.074069 - x[1])) - x[2]) + ((((0.78765 - x[1]) + ((x[0] * x[0]) + (1.0216 - np.exp(x[1])))) + 3.2687) - x[2]) #y=1.08 * 10^2
 
 
 def f4(x: np.ndarray) -> np.ndarray: 
-    return np.log(1.64 * x[0] * x[0]) #y= 26.09960298130464
+    return (((((x[0]*3) + -0.39527) * -0.004329) + 0.46678) + np.cos(x[1])) * 7 
 
 
 def f5(x: np.ndarray) -> np.ndarray: 
-    return np.sin(+6.349873083483724)  #y=0.004440670787932643
+    return np.sin((x[1] * 5.3851e-14) * x[1]) * (((x[1] * np.exp(x[1])) + 1.1635) - np.exp(x[0] + x[1]))  #y=2.00395
 
 
 def f6(x: np.ndarray) -> np.ndarray: 
-    return x[1] - x[0] #y=2.714350734283543
+    return (x[1]*2) - ((((x[0] * 0.69452) + 0.097928) - 0.11889) +((x[1] * 0.30548) - -0.020958))
 
 
-def f7(x: np.ndarray) -> np.ndarray: ...
+def f7(x: np.ndarray) -> np.ndarray: 
+    return (np.exp((x[0] * x[1]) + (np.cos(np.cos(x[1])) + np.cos(np.sin(x[1] * ((x[1] - x[0]) * x[0])) * (x[1]*2)))) * (1.3267 + 0.26225)) + -1.2431
 
 
-def f8(x: np.ndarray) -> np.ndarray: ...
+def f8(x: np.ndarray) -> np.ndarray: 
+    return (((np.exp(x[5] * -1.0831) * (x[5] + -62.992)) + np.exp(x[5] + 4.6193)) - 268.02) + -360.77 
